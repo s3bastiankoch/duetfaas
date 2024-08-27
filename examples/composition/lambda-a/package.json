@@ -1,0 +1,23 @@
+{
+  "name": "babel",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "esbuild src/index.ts --bundle --minify --sourcemap --platform=node --target=es2020 --outfile=dist/index.js",
+    "build:esm": "esbuild src/index.ts --bundle --minify --sourcemap --platform=node --format=esm --outfile=dist/index.mjs --external:@aws-sdk --external:@smithy --external:uuid"
+  },
+  "keywords": [],
+  "author": "Sebastian Koch",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/core": "7.24.7",
+    "@babel/preset-typescript": "7.24.7",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.136",
+    "@types/babel__core": "^7.20.5",
+    "esbuild": "^0.20.2"
+  }
+}

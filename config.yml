@@ -1,0 +1,46 @@
+lambda_a:
+  entry: examples/composition/lambda-a/src/index.ts
+
+lambda_b:
+  entry: examples/composition/lambda-b/src/index.ts
+# type: micro
+
+# 0 regression duet
+
+# Basic metrics for lambdas with 0% regression
+# Mean response time lambdaName  label
+# babel       A        129.843862
+#             B        128.892261
+# Name: responseTimeMs, dtype: float64
+# Median response time lambdaName  label
+# babel       A        108.4595
+#             B        107.9380
+# Name: responseTimeMs, dtype: float64
+# Min response time lambdaName  label
+# babel       A        75.784
+#             B        74.970
+# Name: responseTimeMs, dtype: float64
+# Max response time lambdaName  label
+# babel       A        738.169
+#             B        741.051
+# Name: responseTimeMs, dtype: float64
+
+# =====START=====
+# Basic metrics for lambdas with 0% regression
+# Mean response time lambdaName  label
+# babel       A        138.155087
+#             B        137.566975
+# Name: responseTimeMs, dtype: float64
+# Median response time lambdaName  label
+# babel       A        118.051
+#             B        118.065
+# Name: responseTimeMs, dtype: float64
+# Min response time lambdaName  label
+# babel       A        81.828
+#             B        76.959
+# Name: responseTimeMs, dtype: float64
+# Max response time lambdaName  label
+# babel       A        722.257
+#             B        710.049
+# Name: responseTimeMs, dtype: float64
+# =====END=====

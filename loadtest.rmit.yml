@@ -1,0 +1,14 @@
+config:
+  target: https://hkra7thl536skr5w45aywh5xii0kskwa.lambda-url.eu-west-1.on.aws
+  # processor: ./metrics.rmit.js
+  processor: ./metrics.async-duet.js
+  phases:
+    - duration: 300
+      arrivalCount: 300
+      name: load phase
+
+scenarios:
+  - afterResponse: "trackResponseTimeWithoutQueueTime"
+    flow:
+      - post:
+          url: "/invocations"

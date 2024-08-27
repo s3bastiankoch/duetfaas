@@ -1,0 +1,11 @@
+#!/bin/bash
+
+set -o allexport
+source ../../.env
+set +o allexport
+
+# export TF_VAR_gcp_ssh_private_key=$CLOUD_SSH_PRIVATE_KEY
+# export TF_VAR_gcp_ssh_public_key=$CLOUD_SSH_PUBLIC_KEY
+export TF_VAR_gcp_project=$GCP_PROJECT_ID
+
+terraform apply -auto-approve

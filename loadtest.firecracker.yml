@@ -1,0 +1,14 @@
+config:
+  target: http://34.141.76.197
+  processor: "./metrics.firecracker.js"
+  phases:
+    - duration: 200
+      arrivalCount: 500
+      name: load phase
+
+scenarios:
+  - beforeRequest: "setBody"
+    afterResponse: "trackResponseTimeWithoutQueueTime"
+    flow:
+      - post:
+          url: "/2015-03-31/functions/function/invocations"

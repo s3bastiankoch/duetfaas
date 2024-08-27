@@ -1,0 +1,15 @@
+config:
+  # target: "{{ $env.host }}"
+  target: https://pocyk66dtn4eqyu3qtuaxxhdsu0qilgk.lambda-url.eu-west-1.on.aws
+  processor: "./metrics.classic.js"
+  phases:
+    - duration: 300
+      arrivalCount: 1500
+      name: load phase
+
+scenarios:
+  - afterResponse: "trackResponseTimeWithoutQueueTime"
+    flow:
+      - post:
+          # url: "/2015-03-31/functions/function/invocations"
+          url: "/invocations"
